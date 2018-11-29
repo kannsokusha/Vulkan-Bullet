@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{B382B50E-6A1A-32FF-BAD6-C714C1A2A57C}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>main_task</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main_task.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main_task</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main_task.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main_task</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(ProjectDir)\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main_task.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main_task</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ProjectDir)\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main_task.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main_task</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;$(VULKAN_SDK)\Include;$(SolutionDir)..\BNVulkanEx\utils;$(ProjectDir)..\..\BNVulkanEx\data;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;VULKAN_SAMPLES_BASE_DIR="$(ProjectDir)..\..\";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalOptions>/wd4430 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;VULKAN_SAMPLES_BASE_DIR=\"$(ProjectDir)..\..\ ";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;$(VULKAN_SDK)\glslang\build\glslang\Debug\glslangd.lib;$(VULKAN_SDK)\glslang\build\OGLCompilersDLL\Debug\OGLCompilerd.lib;$(VULKAN_SDK)\glslang\build\glslang\OSDependent\Windows\Debug\OSDependentd.lib;$(VULKAN_SDK)\glslang\build\hlsl\Debug\HLSLd.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Debug\SPIRVd.lib;$(VULKAN_SDK)\Lib\vulkan-1.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\Debug\SPIRV-Toolsd.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\opt\Debug\SPIRV-Tools-optd.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Debug\SPVRemapperd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(ProjectDir)/Debug/main_task.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(ProjectDir)/Debug/main_task.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;NDEBUG;VULKAN_SAMPLES_BASE_DIR="$(ProjectDir)../../";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;NDEBUG;VULKAN_SAMPLES_BASE_DIR=\"$(ProjectDir)../../\";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;$(VULKAN_SDK)\glslang\build\glslang\Release\glslang.lib;$(VULKAN_SDK)\glslang\build\OGLCompilersDLL\Release\OGLCompiler.lib;$(VULKAN_SDK)\glslang\build\glslang\OSDependent\Windows\Release\OSDependent.lib;$(VULKAN_SDK)\glslang\build\hlsl\Release\HLSL.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Release\SPIRV.lib;$(VULKAN_SDK)\Lib\vulkan-1.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\Release\SPIRV-Tools.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\opt\Release\SPIRV-Tools-opt.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Release\SPVRemapper.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(ProjectDir)../../build/BNVulkanEx/Release/main_task.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(ProjectDir)../../build/BNVulkanEx/Release/main_task.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;NDEBUG;VULKAN_SAMPLES_BASE_DIR="$(ProjectDir)../../";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;NDEBUG;VULKAN_SAMPLES_BASE_DIR=\"$(ProjectDir)../../\";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;$(VULKAN_SDK)\glslang\build\glslang\Release\glslang.lib;$(VULKAN_SDK)\glslang\build\OGLCompilersDLL\Release\OGLCompiler.lib;$(VULKAN_SDK)\glslang\build\glslang\OSDependent\Windows\Release\OSDependent.lib;$(VULKAN_SDK)\glslang\build\hlsl\Release\HLSL.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Release\SPIRV.lib;$(VULKAN_SDK)\Lib\vulkan-1.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\Release\SPIRV-Tools.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\opt\Release\SPIRV-Tools-opt.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Release\SPVRemapper.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(ProjectDir)../../build/BNVulkanEx/MinSizeRel/main_task.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(ProjectDir)../../build/BNVulkanEx/MinSizeRel/main_task.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;NDEBUG;VULKAN_SAMPLES_BASE_DIR="$(ProjectDir)../../";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;NDEBUG;VULKAN_SAMPLES_BASE_DIR=\"$(ProjectDir)../../\";VK_USE_PLATFORM_WIN32_KHR;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\BNVulkanEx\utils;$(VULKAN_SDK)\Include;$(ProjectDir)..\..\BNVulkanEx\data;$(VULKAN_SDK)\glslang;$(VULKAN_SDK)\spirv-tools\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;$(VULKAN_SDK)\glslang\build\glslang\Release\glslang.lib;$(VULKAN_SDK)\glslang\build\OGLCompilersDLL\Release\OGLCompiler.lib;$(VULKAN_SDK)\glslang\build\glslang\OSDependent\Windows\Release\OSDependent.lib;$(VULKAN_SDK)\glslang\build\hlsl\Release\HLSL.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Release\SPIRV.lib;$(VULKAN_SDK)\Lib\vulkan-1.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\Release\SPIRV-Tools.lib;$(VULKAN_SDK)\glslang\build\External\spirv-tools\source\opt\Release\SPIRV-Tools-opt.lib;$(VULKAN_SDK)\glslang\build\SPIRV\Release\SPVRemapper.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(ProjectDir)../../build/BNVulkanEx/RelWithDebInfo/main_task.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(ProjectDir)../../build/BNVulkanEx/RelWithDebInfo/main_task.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Animation.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Bnggdh.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\BnggdhDraw.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\BNModel.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\CalculateNormal.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Mat4.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\MyInputStream.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Quaternion.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\QuatKey.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Vec3Key.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Vector3f.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\Vector4f.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bnggdh\VertexDataForDraw.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btDbvt.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btDispatcher.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionWorld.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btGhostObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btHashedSimplePairCache.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btManifoldResult.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btUnionFind.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btBox2dShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btBoxShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCapsuleShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCollisionShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCompoundShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConcaveShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConeShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvex2dShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexHullShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexInternalShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexPolyhedron.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCylinderShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btEmptyShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMultiSphereShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btOptimizedBvh.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btShapeHull.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btSphereShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTetrahedronShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleBuffer.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleCallback.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleMesh.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btUniformScalingShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btContactProcessing.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGenericPoolAllocator.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactBvh.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactShape.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btTriangleShapeEx.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_box_set.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_contact.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_memory.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_tri_collision.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Character\btKinematicCharacterController.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btGearConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btRigidBody.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\Bullet-C-API.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBody.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Vehicle\btRaycastVehicle.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletDynamics\Vehicle\btWheelInfo.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btDefaultSoftBodySolver.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBody.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyHelpers.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyRigidBodyCollisionConfiguration.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftRigidCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftRigidDynamicsWorld.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftSoftCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btAlignedAllocator.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btConvexHull.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btConvexHullComputer.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btGeometryUtil.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btPolarDecomposition.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btQuickprof.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btSerializer.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\bullet\LinearMath\btVector3.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\gameController\MoveThread.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\gameObject\GameAbstractObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\legencyUtil\util.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\Constant.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\DrawObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\GameDashboard.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\main_task.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\MyBulletManager.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\MyVulkanManager.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\PathData.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\PhyObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\ShaderCompileUtil.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\ShaderQueueSuit_Common.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\ShaderQueueSuit_CommonTexLight.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\ShaderQueueSuit_Dashboard2D.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\main_task\ThreadTask.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\map\MapCrossroads.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\map\SkyBallData.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\AttachBoneControl.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\Cs_bullet.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\OtherPersonDraw.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Abdomen.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Arm.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Body.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Chest.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Foot.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Hand.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Head.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonBody\Leg.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonDynamicCollision.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\PersonMove.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\Shooting.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\person\SimpleNPC.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\sparsehash\dense_hash_map.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\sparsehash\dense_hash_set.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\sparsehash\sparsetabl.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\sparsehash\sparse_hash_map.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\sparsehash\sparse_hash_set.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\sparsehash\traits.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\btContactResultCallback.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\CameraUtil.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\Dashboard2DObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\FileUtil.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\FPSUtil.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\HelpFunction.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\LightManager.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\LoadUtil.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\MatrixState2D.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\MatrixState3D.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\ObjObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\TexDataObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\TexDrawableObject.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\util\TextureManager.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\weapon\AK47.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\weapon\Knife.cpp" />
+    <ClCompile Include="..\..\BNVulkanEx\weapon\Weapon.cpp" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Animation.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Bnggdh.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\BnggdhDraw.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\BNModel.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\bytell_hash_map.hpp" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\CalculateNormal.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\flat_hash_map.hpp" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Mat4.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\MyInputStream.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Quaternion.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\QuatKey.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\unordered_map.hpp" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Vec3Key.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Vector3f.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\Vector4f.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bnggdh\VertexDataForDraw.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\Constant.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\GameDashboard.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\ShaderQueueSuit_Common.h" />
+    <ClInclude Include="..\..\BNVulkanEx\map\SkyBallData.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\AttachBoneControl.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\Cs_bullet.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\OtherPersonDraw.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Abdomen.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Arm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Body.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Chest.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Foot.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Hand.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Head.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonBody\Leg.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonDynamicCollision.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\Shooting.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\SimpleNPC.h" />
+    <ClInclude Include="..\..\BNVulkanEx\sparsehash\internal\densehashtable.h" />
+    <ClInclude Include="..\..\BNVulkanEx\sparsehash\internal\hashtable-common.h" />
+    <ClInclude Include="..\..\BNVulkanEx\sparsehash\internal\libc_allocator_with_realloc.h" />
+    <ClInclude Include="..\..\BNVulkanEx\sparsehash\internal\sparsehashtable.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\btContactResultCallback.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\TexDrawableObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\weapon\AK47.h" />
+    <ClInclude Include="..\..\BNVulkanEx\weapon\Knife.h" />
+    <ClInclude Include="..\..\BNVulkanEx\weapon\Weapon.h" />
+    <ClInclude Include="resource2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\BNVulkanEx\bullet\btBulletCollisionCommon.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\btBulletDynamicsCommon.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\Bullet-C-Api.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btAxisSweep3.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btBroadphaseInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btBroadphaseProxy.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btDbvt.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btDbvtBroadphase.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btDispatcher.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btOverlappingPairCache.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btOverlappingPairCallback.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btQuantizedBvh.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\BroadphaseCollision\btSimpleBroadphase.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btBoxBoxDetector.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionConfiguration.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionCreateFunc.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionDispatcher.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionObjectWrapper.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCollisionWorld.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btGhostObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btHashedSimplePairCache.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btInternalEdgeUtility.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btManifoldResult.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSimulationIslandManager.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\btUnionFind.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btBox2dShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btBoxShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCapsuleShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCollisionMargin.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCollisionShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCompoundShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConcaveShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConeShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvex2dShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexHullShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexInternalShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexPointCloudShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexPolyhedron.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btCylinderShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btEmptyShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMaterial.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMinkowskiSumShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btMultiSphereShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btOptimizedBvh.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btPolyhedralConvexShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btShapeHull.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btSphereShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btStaticPlaneShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btStridingMeshInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTetrahedronShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleBuffer.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleCallback.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleInfoMap.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleMesh.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleMeshShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btTriangleShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\CollisionShapes\btUniformScalingShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btBoxCollision.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btClipPolygon.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btCompoundFromGimpact.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btContactProcessing.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGenericPoolAllocator.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGeometryOperations.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactBvh.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactMassUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactQuantizedBvh.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btGImpactShape.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btQuantization.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\btTriangleShapeEx.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_array.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_basic_geometry_operations.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_bitset.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_box_collision.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_box_set.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_clip_polygon.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_contact.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_geometry.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_geom_types.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_hash_table.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_linear_math.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_math.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_memory.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_radixsort.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\Gimpact\gim_tri_collision.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btConvexCast.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btConvexPenetrationDepthSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btDiscreteCollisionDetectorInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkEpa2.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btManifoldPoint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btPersistentManifold.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btPointCollector.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btRaycastCallback.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btSimplexSolverInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Character\btCharacterControllerInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Character\btKinematicCharacterController.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btConeTwistConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btConstraintSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btContactConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btContactSolverInfo.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btFixedConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btGearConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btHinge2Constraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btHingeConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btJacobianEntry.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSliderConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSolverBody.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btSolverConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btTypedConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\ConstraintSolver\btUniversalConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btActionInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btDynamicsWorld.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btRigidBody.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Dynamics\btSimpleDynamicsWorld.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBody.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyJointMotor.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyLink.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyLinkCollider.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Featherstone\btMultiBodySolverConstraint.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btDantzigLCP.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btDantzigSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btMLCPSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btMLCPSolverInterface.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btPATHSolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\MLCPSolvers\btSolveProjectedGaussSeidel.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Vehicle\btRaycastVehicle.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Vehicle\btVehicleRaycaster.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletDynamics\Vehicle\btWheelInfo.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btDefaultSoftBodySolver.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBody.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyData.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyHelpers.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyInternals.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodyRigidBodyCollisionConfiguration.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodySolvers.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftBodySolverVertexBuffer.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftRigidCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftRigidDynamicsWorld.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSoftSoftCollisionAlgorithm.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\BulletSoftBody\btSparseSDF.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btAabbUtil2.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btAlignedAllocator.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btAlignedObjectArray.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btConvexHull.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btConvexHullComputer.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btDefaultMotionState.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btGeometryUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btGrahamScan2dConvexHull.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btHashMap.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btIDebugDraw.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btList.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btMatrix3x3.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btMatrixX.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btMinMax.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btMotionState.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btPolarDecomposition.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btPoolAllocator.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btQuadWord.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btQuaternion.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btQuickprof.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btRandom.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btScalar.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btSerializer.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btStackAlloc.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btTransform.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btTransformUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\LinearMath\btVector3.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\neon\boolInVec.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\neon\floatInVec.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\neon\mat_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\neon\quat_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\neon\vectormath_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\neon\vec_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\scalar\boolInVec.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\scalar\floatInVec.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\scalar\mat_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\scalar\quat_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\scalar\vectormath_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\scalar\vec_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\boolInVec.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\floatInVec.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\mat_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\quat_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\vecidx_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\vectormath_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\sse\vec_aos.h" />
+    <ClInclude Include="..\..\BNVulkanEx\bullet\vectormath\vmInclude.h" />
+    <ClInclude Include="..\..\BNVulkanEx\gameController\MoveThread.h" />
+    <ClInclude Include="..\..\BNVulkanEx\gameObject\GameAbstractObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\legencyUtil\util.hpp" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\DrawObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\help.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\MyBulletManager.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\MyVulkanManager.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\PathData.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\PhyObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\ShaderCompileUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\ShaderQueueSuit_CommonTexLight.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\ShaderQueueSuit_Dashboard2D.h" />
+    <ClInclude Include="..\..\BNVulkanEx\main_task\ThreadTask.h" />
+    <ClInclude Include="..\..\BNVulkanEx\map\MapCrossroads.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\CameraUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\Dashboard2DObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\FileUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\FPSUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\HelpFunction.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\LightManager.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\LoadUtil.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\Matrix.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\MatrixState2D.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\MatrixState3D.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\ObjObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\TexDataObject.h" />
+    <ClInclude Include="..\..\BNVulkanEx\util\TextureManager.h" />
+    <ClInclude Include="..\..\BNVulkanEx\person\PersonMove.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\BNVulkanEx\bullet\BulletSoftBody\CMakeLists.txt" />
+    <Text Include="..\..\BNVulkanEx\bullet\LinearMath\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\BNVulkanEx\bullet\BulletSoftBody\premake4.lua" />
+    <None Include="..\..\BNVulkanEx\bullet\LinearMath\premake4.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="main_task2.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
